@@ -20,8 +20,7 @@ def load_data(file_path):
 # Initialize Pinecone with the given API key and index name
 def initialize_pinecone():
     pc = pinecone.Pinecone(
-        api_key=pinecone_api_key,
-        proxy_url='http://127.0.0.1:10809',
+        api_key=pinecone_api_key
     )
     return pc.Index('capture')
 
