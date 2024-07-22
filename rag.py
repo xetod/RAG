@@ -17,7 +17,7 @@ def load_data(file_path):
 # Initialize Pinecone with the given API key and index name
 def initialize_pinecone():
     pc = pinecone.Pinecone(
-        api_key='c70b011b-f765-404a-a2c4-dd6a4be1eaf9'
+        api_key=pinecone_api_key
     )
     return pc.Index('capture')
 
@@ -124,7 +124,7 @@ with st.sidebar:
                 print('query pinecone ...')
                 matches = query_pinecone(pinecone, user_prompt, model, top_k=3, namespace='')
                 print('ask chatgpt ...')
-                response = generate_response_openai(matches, 'sk-proj-m3gHffjAFjdyVsPKzLQMT3BlbkFJLl97r348J63S8l0Q2DPy', user_prompt)
+                response = generate_response_openai(matches, openai_api_key, user_prompt)
                 st.session_state.message.append(
                     AIMessage(content=response.content)
                 )
