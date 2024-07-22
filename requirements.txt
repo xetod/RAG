@@ -1,4 +1,5 @@
 langchain
+langchain_community
 sentence-transformers
 pinecone-client
 streamlit

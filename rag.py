@@ -3,10 +3,7 @@ import json
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import (SystemMessage, HumanMessage, AIMessage)
 from sentence_transformers import SentenceTransformer
-# from pinecone import Pinecone
 import pinecone
-# from langchain_openai import ChatOpenAI
-# from langchain import LLMChain
 from langchain.prompts import PromptTemplate
 import streamlit as st
 from streamlit_chat import message
