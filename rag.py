@@ -47,7 +47,7 @@ def generate_response_openai(matches, openai_api_key, query):
     context = ""
     for match in matches:
         metadata = match['metadata']
-        context += f"Answer: {metadata['Answer']}\nSection: {metadata['Section']}\nFormRef: {metadata['FormRef']}\nLocation/Asset: {metadata['Location/Asset']}\nAdditional Information: {metadata['Additional Information']}\n\n"
+        context += f"answer: {metadata['answer']}\nsection: {metadata['section']}\nform_ref: {metadata['form_ref']}\nlocation_asset: {metadata['location_asset']}\nadditional_information: {metadata['additional_information']}\n\n"
         # prompt += context
 
     prompt_template = PromptTemplate(
